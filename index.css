@@ -132,3 +132,26 @@ select {
 .text-white {
   color: hsl(var(--clr-white));
 }
+
+#colors {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+#colors .div1 {
+  grid-area: 1 / 1 / 2 / 4;
+}
+
+#colors .div2 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+#colors .div3 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+#colors .div4 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
