@@ -174,3 +174,8 @@ select {
 .fs-600 {
     line-height: 1.1;
 }
+
+.numbered-title {
+    text-transform: uppercase;
+    font-family: var(--ff-sans-cond);
+}
