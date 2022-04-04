@@ -237,3 +237,95 @@ not adding any specificity */
   opacity: 1;
   transform: scale(1.5);
 }
+
+.primary-navigation {
+  --gap: 8rem;
+  --underline-gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-sans-cond);
+  background-color: hsl(var(--clr-white) / .05);
+}
+
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.primary-navigation a > span{
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+.underline-indicators > * {
+  padding: var(--underline-gap, 1rem) 0;
+  cursor: pointer;
+  border: 0;
+  border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
+  transition: border-color 500ms ease;
+}
+
+.underline-indicators >*:hover,
+.underline-indicators >*:focus {
+  border-color: hsl( var(--clr-white) / 0.5 );
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
+  color: hsl(var(--clr-white));
+  border-color: hsl(var(--clr-white));
+}
+
+.tab-list {
+  --gap: 2rem;
+}
+
+.dot-indicators> * {
+  cursor: pointer;
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 50%;
+  padding: 0.5em;
+  background-color: hsl(var(--clr-white) / .25);
+  transition: background-color 500ms ease;
+}
+
+.dot-indicators>*:hover,
+.dot-indicators>*:focus {
+  background-color: hsl(var(--clr-white) / .5);
+}
+
+.dot-indicators>[aria-selected="true"] {
+  background-color: hsl(var(--clr-white));
+}
+
+.number-indicators {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-500);
+  flex-direction: column;
+  align-items: center;
+}
+
+.number-indicators>* {
+  display: grid;
+  place-content: center;
+  color: hsl(var(--clr-white));
+  text-decoration: none;
+  border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  transition: border 500ms ease-in;
+}
+
+/* .number-indicators>*:not(.active):hover {
+  border-color: hsl( var(--clr-white) / 0.5 );
+} */
+.number-indicators>*:hover {
+  border-color: hsl( var(--clr-white) / 0.5 );
+}
+
+.number-indicators>.active {
+  color: hsl(var(--clr-dark));
+  background-color: hsl(var(--clr-white));
+}
