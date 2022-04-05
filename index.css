@@ -138,6 +138,10 @@ select {
   gap: var(--gap, 1rem);
 }
 
+.d-block {
+  display: block;
+}
+
 /* any element which has a adjacent previous sibling and is child of ".flow", is selected */
 /* .flow > * + * {
   margin-top: 1rem;
