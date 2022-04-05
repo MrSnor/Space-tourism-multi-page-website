@@ -138,6 +138,11 @@ not adding any specificity */
   max-width: 80rem;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 2em minmax(0, 60rem) 2em;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -209,7 +214,7 @@ not adding any specificity */
 
 .large-button{
   position: relative;
-  display: grid;
+  display: inline-grid;
   padding: 0 2em;
   aspect-ratio: 1;
   place-content: center;
