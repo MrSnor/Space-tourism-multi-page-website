@@ -301,7 +301,14 @@ not adding any specificity */
   margin: 0;
   padding: 0;
   font-family: var(--ff-sans-cond);
+  background-color: hsl(var(--clr-dark) / 0.95 );
+}
+
+@supports (backdrop-filter: blur(25px) saturate(150%)) {
+  .primary-navigation {
   background-color: hsl(var(--clr-white) / .05);
+  backdrop-filter: blur(25px) saturate(150%);
+  -webkit-backdrop-filter: blur(25px) saturate(73%);}
 }
 
 @media (max-width: 35rem) {
@@ -314,7 +321,7 @@ not adding any specificity */
     padding: min(20rem, 15vh) 2rem;
     margin: 0;
     flex-direction: column;
-    background-color: black;
+    /* background-color: black; */
   }
 
   .primary-navigation.underline-indicators > .active {
