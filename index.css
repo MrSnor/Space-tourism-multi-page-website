@@ -329,7 +329,6 @@ not adding any specificity */
     padding: min(20rem, 15vh) 2rem;
     margin: 0;
     flex-direction: column;
-    /* background-color: black; */
     transition: transform 700ms ease-in-out;
     transform: translateX(100%);
   }
