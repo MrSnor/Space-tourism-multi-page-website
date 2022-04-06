@@ -335,6 +335,7 @@ not adding any specificity */
 
 .primary-navigation a {
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .primary-navigation a > span{
