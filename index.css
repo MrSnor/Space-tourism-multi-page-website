@@ -382,18 +382,44 @@ not adding any specificity */
     z-index: 2000;
     right: 1rem;
     top: 2rem;
+
     background-color: transparent;
     border: 0;
-    background-image: url("./assets/shared/icon-hamburger.svg");
+
+    /* background-image: url("./assets/shared/icon-hamburger.svg");
     background-repeat: no-repeat;
     background-position: center;
     width: 1.5rem;
-    aspect-ratio: 1;
+    aspect-ratio: 1; */
   }
+  
+.mobile-nav-toggle div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
 
-  .mobile-nav-toggle[aria-expanded="true"] {
+/* animation of menu button toggle */
+
+.mobile-nav-toggle[aria-expanded="true"] .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.mobile-nav-toggle[aria-expanded="true"] .bar2 {
+  opacity: 0;
+}
+
+.mobile-nav-toggle[aria-expanded="true"] .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+  /* .mobile-nav-toggle[aria-expanded="true"] {
     background-image: url("./assets/shared/icon-close.svg");
-  }
+  } */
 
   /* "focus-visible" activates when 
   selected using keyboard(after pressing tab) */
