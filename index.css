@@ -165,7 +165,6 @@ not adding any specificity */
 
 .grid-container {
   display: grid;
-  border: 3px dashed royalblue;
   text-align: center;
   place-items: center;
   padding-inline: 1rem;
@@ -184,25 +183,15 @@ not adding any specificity */
   
   .grid-container > *:first-child {
       grid-column: 2;
-      outline: 1px solid red;
   }
 
   .grid-container > *:last-child {
       grid-column: 3;
-      outline: 1px solid yellow;
   }
     .grid-container--home {
       padding-bottom: max(6rem, 20vh);
       align-items: end;
   }
-}
-
-.grid-container > *:first-child {
-  outline: 1px solid red;
-}
-
-.grid-container > *:last-child {
-  outline: 1px solid yellow;
 }
 
 .sr-only {
