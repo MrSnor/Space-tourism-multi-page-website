@@ -167,37 +167,6 @@ not adding any specificity */
   max-width: 80rem;
 }
 
-.grid-container {
-  display: grid;
-  text-align: center;
-  place-items: center;
-  padding-inline: 1rem;
-}
-
-.grid-container * {
-  max-width: 50ch;
-}
-
-@media (min-width: 45em) {
-  .grid-container {
-      column-gap: var(--container-gap, 2rem);
-      grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
-      text-align: left;
-  }
-  
-  .grid-container > *:first-child {
-      grid-column: 2;
-  }
-
-  .grid-container > *:last-child {
-      grid-column: 3;
-  }
-    .grid-container--home {
-      padding-bottom: max(6rem, 20vh);
-      align-items: end;
-  }
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -563,5 +532,42 @@ body {
 @media (min-width: 45em) {
   .home {
     background-image: url("./assets/home/background-home-desktop.jpg");
+  }
+}
+
+
+/* ----------------------- */
+/* * Layout                */
+/* ----------------------- */
+
+
+.grid-container {
+  display: grid;
+  text-align: center;
+  place-items: center;
+  padding-inline: 1rem;
+}
+
+.grid-container * {
+  max-width: 50ch;
+}
+
+@media (min-width: 45em) {
+  .grid-container {
+      column-gap: var(--container-gap, 2rem);
+      grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
+      text-align: left;
+  }
+  
+  .grid-container > *:first-child {
+      grid-column: 2;
+  }
+
+  .grid-container > *:last-child {
+      grid-column: 3;
+  }
+    .grid-container--home {
+      padding-bottom: max(6rem, 20vh);
+      align-items: end;
   }
 }
