@@ -61,7 +61,7 @@
     </picture>
 
     <!-- Tabs -->
-    <div class="tab-list underline-indicators flex">
+    <div id="destination-tabs" class="tab-list underline-indicators flex">
       <button aria-selected="true" class="uppercase text-accent letter-spacing-2 ff-sans-cond">Moon</button>
       <button aria-selected="false" class="uppercase text-accent letter-spacing-2 ff-sans-cond">Mars</button>
       <button aria-selected="false" class="uppercase text-accent letter-spacing-2 ff-sans-cond">Europe</button>
@@ -69,8 +69,8 @@
     </div>
 
     <article class="destination-info flow">
-      <h2 class="uppercase fs-800 ff-serif">Moon</h2>
-      <p>
+      <h2 id="planetName" class="uppercase fs-800 ff-serif">Moon</h2>
+      <p id="description">
         See our planet as you’ve never seen it before. A perfect relaxing trip away to help
         regain perspective and come back refreshed. While you’re there, take in some history
         by visiting the Luna 2 and Apollo 11 landing sites.
@@ -80,11 +80,11 @@
       <div class="destination-meta flex">
         <div>
           <h3 class="ff-sans-cond fs-200 uppercase letter-spacing-3 text-accent">Avg. distance</h3>
-          <p class="ff-serif uppercase">384,400 km</p>
+          <p id="distance" class="ff-serif uppercase">384,400 km</p>
         </div>
         <div>
           <h3 class="ff-sans-cond fs-200 uppercase letter-spacing-3 text-accent">Est. travel time</h3>
-          <p class="ff-serif uppercase">3 days</p>
+          <p id="travel" class="ff-serif uppercase">3 days</p>
         </div>
       </div>
 
