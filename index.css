@@ -440,6 +440,7 @@ not adding any specificity */
   border: 0;
   border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
   transition: border-color 500ms ease;
+  background-color: transparent;
 }
 
 .underline-indicators >*:hover,
