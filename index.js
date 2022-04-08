@@ -43,7 +43,7 @@ destTabs.forEach((value, index) => {
   // listen for click on tabs
   value.addEventListener('click', (e) => {
     
-    removeBorder()
+    removeBorder(destTabs)
     // add border to selected tab
     e.target.setAttribute("aria-selected", "true")
 
@@ -78,6 +78,6 @@ destTabs.forEach((value, index) => {
 });
 
 // to remove "highlight/selected border" from tab 
-function removeBorder() {
-  destTabs.forEach(item => item.setAttribute("aria-selected", "false"))
+function removeBorder(tabs) {
+  tabs.forEach(item => item.setAttribute("aria-selected", "false"))
 }
