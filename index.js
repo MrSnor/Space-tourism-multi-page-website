@@ -118,6 +118,43 @@ crewTabs.forEach((value, index) => {
   })
 });
 
+// * in-page tab manipulation for technology page
+
+const technologyTabs = document.querySelectorAll("#technology-tabs > *")
+
+technologyTabs.forEach((value, index) => {
+
+  // listen for click on tabs
+  value.addEventListener('click', (e) => {
+
+    removeBorder(technologyTabs)
+    // add border to selected tab
+    e.target.setAttribute("aria-selected", "true")
+
+    // get id of parent div to be used to relate data from json file
+    const reqTabId = e.target.parentElement.id
+    // get respective data of clicked tab by relating it to index
+    const respectiveDataFromJSON = tabsJSONData[reqTabId][index]
+
+    const techName = document.querySelector("#techName")
+    const techDescription = document.querySelector("#techDescription")
+    const techImages = document.querySelector("#main > picture")
+
+    // replacing html values with data from json file
+
+    techName.textContent = respectiveDataFromJSON.name
+
+    techDescription.textContent = respectiveDataFromJSON.description
+
+    techImages.children[0].src = respectiveDataFromJSON.images["landscape"]
+
+    techImages.children[1].src = respectiveDataFromJSON.images["portrait"]
+
+
+    e.preventDefault()
+  })
+});
+
 // to remove "highlight/selected border" from tab 
 function removeBorder(tabs) {
   tabs.forEach(item => item.setAttribute("aria-selected", "false"))
