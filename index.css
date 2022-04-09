@@ -492,22 +492,25 @@ not adding any specificity */
   display: grid;
   place-content: center;
   color: hsl(var(--clr-white));
-  text-decoration: none;
-  border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
+  cursor: pointer;
+  border: 1px solid hsl( var(--clr-white) / 0.2 );
+  
   height: 3em;
   width: 3em;
   border-radius: 50%;
-  transition: border 500ms ease-in;
+
+  background-color: transparent;
+  transition: border-color 500ms ease-in;
 }
 
-/* .number-indicators>*:not(.active):hover {
-  border-color: hsl( var(--clr-white) / 0.5 );
+/* .number-indicators>*:not([aria-selected="true"]):hover {
+  border-color: hsl( var(--clr-white) / 1 );
 } */
 .number-indicators>*:hover {
-  border-color: hsl( var(--clr-white) / 0.5 );
+  border-color: hsl( var(--clr-white) / 1 );
 }
 
-.number-indicators>.active {
+.number-indicators>[aria-selected="true"] {
   color: hsl(var(--clr-dark));
   background-color: hsl(var(--clr-white));
 }
