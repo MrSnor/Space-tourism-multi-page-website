@@ -690,23 +690,6 @@ body {
   grid-area: content;
 }
 
-@media (max-width: 55em) {
-
-  .grid-container--technology {
-    padding-inline: 0 ;
-  }
-  
-  .grid-container--technology > .number-indicators {
-    flex-direction: row;
-  }
-
-  .grid-container--technology > .technology-info> #techDescription {
-    padding-inline: 1rem;
-    max-width: 50ch;
-  }
-
-}
-
 @media (min-width: 35em) {
   .numbered-title {
     justify-self: start;
@@ -789,13 +772,27 @@ body {
 
 }
 
-@media (max-width:55em) {
+@media (max-width:54.999em) {
   .grid-container--technology {
     grid-template-columns: auto;
+    padding-inline: 0;
+    text-align: center;
+  }
+
+  .grid-container--technology>.number-indicators {
+    flex-direction: row;
+  }
+
+  .grid-container--technology>.technology-info>#techDescription {
+    padding-inline: 1rem;
+    max-width: 50ch;
   }
 }
+
 @media (min-width:55em) {
-    .grid-container--technology {
+
+  .grid-container--technology {
+    --flow-space: 0;
     grid-template-columns: 0.1fr 0.5fr 1.9fr 1.7fr; 
     grid-template-rows: 0.9fr 1.1fr 1fr; 
     grid-template-areas:
