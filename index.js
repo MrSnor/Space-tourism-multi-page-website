@@ -35,14 +35,15 @@ fetch('./data.json')
     tabsJSONData = data;
   })
 
+// in-page tab manipulation for destination page
+
 const destTabs = document.querySelectorAll("#destination-tabs > *")
 
-// in-page tab manipulation for destination page
 destTabs.forEach((value, index) => {
 
   // listen for click on tabs
   value.addEventListener('click', (e) => {
-    
+
     removeBorder(destTabs)
     // add border to selected tab
     e.target.setAttribute("aria-selected", "true")
@@ -71,6 +72,46 @@ destTabs.forEach((value, index) => {
     planetImages.children[0].srcset = respectiveDataFromJSON.images.webp
 
     planetImages.children[1].src = respectiveDataFromJSON.images.png
+
+
+    e.preventDefault()
+  })
+});
+
+// in-page tab manipulation for crew page
+
+const crewTabs = document.querySelectorAll("#crew-tabs > *")
+
+crewTabs.forEach((value, index) => {
+
+  // listen for click on tabs
+  value.addEventListener('click', (e) => {
+
+    removeBorder(crewTabs)
+    // add border to selected tab
+    e.target.setAttribute("aria-selected", "true")
+
+    // get id of parent div to be used to relate data from json file
+    const reqTabId = e.target.parentElement.id
+    // get respective data of clicked tab by relating it to index
+    const respectiveDataFromJSON = tabsJSONData[reqTabId][index]
+
+    const memberName = document.querySelector("#memberName")
+    const memberBio = document.querySelector("#memberBio")
+    const memberRole = document.querySelector("#memberRole")
+    const memberImages = document.querySelector("#main > picture")
+
+    // replacing html values with data from json file
+
+    memberName.textContent = respectiveDataFromJSON.name
+
+    memberBio.textContent = respectiveDataFromJSON.bio
+
+    memberRole.textContent = respectiveDataFromJSON.role
+
+    memberImages.children[0].srcset = respectiveDataFromJSON.images.webp
+
+    memberImages.children[1].src = respectiveDataFromJSON.images.png
 
 
     e.preventDefault()
