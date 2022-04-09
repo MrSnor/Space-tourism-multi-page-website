@@ -667,6 +667,46 @@ body {
     color: hsl( var(--clr-white) / 0.5 );
 }
 
+/* Technology Layout */
+
+.grid-container--technology {
+  --flow-space: 2rem;
+  grid-template-areas:
+    'title'
+    'image'
+    'tabs'
+    'content'
+}
+
+.grid-container--technology > picture {
+  grid-area: image;
+}
+
+.grid-container--technology > .number-indicators {
+  grid-area: tabs;
+}
+
+.grid-container--technology > .technology-info {
+  grid-area: content;
+}
+
+@media (max-width: 55em) {
+
+  .grid-container--technology {
+    padding-inline: 0 ;
+  }
+  
+  .grid-container--technology > .number-indicators {
+    flex-direction: row;
+  }
+
+  .grid-container--technology > .technology-info> #techDescription {
+    padding-inline: 1rem;
+    max-width: 50ch;
+  }
+
+}
+
 @media (min-width: 35em) {
   .numbered-title {
     justify-self: start;
@@ -685,6 +725,14 @@ body {
         'content'
         'tabs'
         'image';
+  }
+
+  .grid-container--technology .numbered-title {
+    margin-left: 2rem;
+  }
+
+  .grid-container--technology > .technology-info> #techDescription {
+    line-height: 2;
   }
 
 }
@@ -739,8 +787,24 @@ body {
     justify-self: start;
   }
 
-  /* .grid-container--crew > picture {
-    align-self: end;
-  } */
-  
+}
+
+@media (max-width:55em) {
+  .grid-container--technology {
+    grid-template-columns: auto;
+  }
+}
+@media (min-width:55em) {
+    .grid-container--technology {
+    grid-template-columns: 0.1fr 0.5fr 1.9fr 1.7fr; 
+    grid-template-rows: 0.9fr 1.1fr 1fr; 
+    grid-template-areas:
+      '. title title .'
+      '. tabs content image'
+      '. tabs content image';
+  }
+
+  .grid-container--technology .number-indicators {
+    width: fit-content;
+  }
 }
