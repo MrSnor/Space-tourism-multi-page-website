@@ -20,7 +20,6 @@ navToggle.addEventListener("click", () => {
 
 // to close menu when it loses focus
 navToggle.addEventListener('blur', () => {
-  console.log("blurred")
   nav.setAttribute("data-visible", "false")
   navToggle.setAttribute("aria-expanded", "false")
 })
