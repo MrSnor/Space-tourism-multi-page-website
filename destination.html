@@ -17,6 +17,44 @@
   <link rel="stylesheet" href="index.css">
   <title>Space Tour Lets Goo</title>
 
+  <style>
+    #main>picture {
+      transition: opactyAnimation 0.5s;
+      animation: opactyAnimation 0.5s, rotateAnimate 85s linear infinite;
+    }
+
+    @keyframes opactyAnimation {
+
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes rotateAnimate {
+      0% {
+
+        transform: rotate(0deg);
+      }
+
+      50% {
+        transform: rotate(180deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+
+    }
+  </style>
+
   <script src="./index.js" defer></script>
 </head>
 
