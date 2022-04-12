@@ -90,7 +90,7 @@ body {
   color: hsl(var(--clr-white));
   background-color: hsl(var(--clr-dark));
   line-height: 1.5;
-  min-height: 100vh;
+  min-height: 130vh;
 
   display: grid;
   grid-template-rows: min-content 1fr;
@@ -522,6 +522,7 @@ not adding any specificity */
 body {
   background-size: cover;
   background-position: bottom center;
+  background-repeat: no-repeat;
 }
 
 /* home */
@@ -671,6 +672,9 @@ body {
 .grid-container--crew > picture {
   grid-area: image;
   max-width: 60%;
+}
+
+.grid-container--crew > picture > * {
   border-bottom: 1px solid hsl( var(--clr-white) / .1);
 }
 
@@ -729,6 +733,17 @@ body {
         'image';
   }
 
+  .grid-container--crew article {
+    min-height: 220px;
+  }
+
+  .grid-container--crew picture {
+    display: grid;
+    max-width: 60%;
+    margin-bottom: 6rem;
+    min-height: 550px;
+  }
+
   .grid-container--technology .numbered-title {
     margin-left: 2rem;
   }
@@ -768,9 +783,12 @@ body {
       '. image content .';
   }
 
-  .grid-container--destination>picture,
-  .grid-container--crew>picture {
+  .grid-container--destination>picture {
     max-width: 90%;
+  }
+
+  .grid-container--crew>picture {
+    max-width: 60%;
   }
 
   .destination-meta {
@@ -783,6 +801,7 @@ body {
       '. title title .'
       '. content image .'
       '. tabs image .';
+    grid-template-rows: .1fr 2fr .5fr;
   }
 
   .grid-container--crew > .dot-indicators {
